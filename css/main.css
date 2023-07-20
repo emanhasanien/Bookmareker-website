@@ -1,0 +1,75 @@
+body {
+  background-color: #f7ecde;
+}
+:root{
+--main-color : #fec260 ;
+}
+
+
+::selection{
+    background: var(--main-color);
+}
+
+h1 {
+  text-align: center;
+  margin: 80px auto;
+  font-family: 'Pacifico', cursive;
+  color: #352e28;
+  font-size: 64px;
+  font-weight: 700;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background-color:var(--main-color);
+  z-index: -1;
+  transition: 0.5s all;
+}
+
+h1:hover::after {
+  height: 60%;
+}
+
+.main-section {
+  border-top: 3px dotted #000;
+  border-bottom: 3px dotted #000;
+}
+
+main p {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight:700 ;
+  background: -webkit-linear-gradient(green,yellow);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+ 
+}
+
+main input[type=text]:focus{
+   border-color: #ee7757;
+   box-shadow: 0 0 5px 3px var(--main-color);
+}
+main .submit{
+    padding: 8px 60px;
+    background-color: #d1512d;
+    font-size: 20px;
+    color: white;
+    transition: .5s all;
+    margin-bottom: 40px;
+}
+
+main .submit:hover{
+    background-color: #a13516;
+    color: white;
+}
+
